@@ -107,6 +107,22 @@ print("Titles: ",titles)
 ##print("Pricing: ", prices)
 
 ###VERSION 2:
-titles = [price.find('ul',class_ ='price').find('li',class_='price-current').strong.text + price.sup.text for price in items]
-print("Pricing: ",titles)
+prices = ["$" + price.find('ul',class_ ='price').find('li',class_='price-current').strong.text + price.sup.text for price in items]
+print("Pricing: ",prices)
 ###################################################################
+
+#Using Pandas Data frame
+RAM_info = pd.DataFrame({
+     'Brand':  brand,
+     'Title': titles,
+     'Ratings': ratings,
+     'Prices': prices,
+     'Number of Reviews':numOfReviews,
+     })
+
+print(RAM_info)
+
+#export info to csv
+RAM_info.to_csv('RAM.csv')
+
+
