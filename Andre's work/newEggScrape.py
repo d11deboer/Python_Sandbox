@@ -56,7 +56,7 @@ brand = [item.find('div',class_ ='item-info').find('a',class_='item-brand').find
 
 #VERSION 2:
 ratings = [rating.find('div',class_ ='item-info').find('a',class_='item-rating').i['class'][1][7] for rating in items]
-print(ratings)
+print("Ratings: ", ratings)
 
 ###################################################################
 
@@ -73,5 +73,40 @@ print(ratings)
 
 #VERSION 2:
 numOfReviews = [review.find('div',class_ ='item-info').find('span',class_='item-rating-num').text.strip('()') for review in items]
-print(numOfReviews)
+print("reviews: ", numOfReviews)
+###################################################################
+
+
+###########################Title###########################
+#VERSION 1: Traditional for loop, appending number of reviews to a list
+##titles = []
+##
+##for title in items:
+##     itemInfoContainer = title.find('div',class_ ='item-info')
+##     titleInfoContainer = itemInfoContainer.find('a',class_='item-title')
+##     title = titleInfoContainer.text
+##     titles.append(title)
+##print("Titles: ", titles)
+
+#VERSION 2:
+titles = [title.find('div',class_ ='item-info').find('a',class_='item-title').text for title in items]
+print("Titles: ",titles)
+###################################################################
+
+
+
+###########################PRICING###########################
+#VERSION 1: Traditional for loop, appending prices  to a list
+##prices = []
+##print('\n\n\n')
+##for price in items:
+##     priceContainer = price.find('ul',class_ ='price')
+##     priceInfoContainer = priceContainer.find('li',class_='price-current')
+##     pricing = (priceInfoContainer.strong.text) + (priceInfoContainer.sup.text)
+##     prices.append(pricing)
+##print("Pricing: ", prices)
+
+###VERSION 2:
+titles = [price.find('ul',class_ ='price').find('li',class_='price-current').strong.text + price.sup.text for price in items]
+print("Pricing: ",titles)
 ###################################################################
