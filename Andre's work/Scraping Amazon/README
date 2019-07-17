@@ -1,0 +1,9 @@
+This script will scrape Amazon's "Today's Deals" page. 
+As of this moment, I haven't learned how to scrape multiple page results of a website.
+For now, we are just going to scrape one page.
+
+Objective(Scrape):
+-Prices
+-Ratings
+-Number of reviews
+
