@@ -3,6 +3,7 @@ As of this moment, I haven't learned how to scrape multiple page results of a we
 For now, we are just going to scrape one page.
 
 Objective(Scrape):
+-Title
 -Prices
 -Ratings
 -Number of reviews
